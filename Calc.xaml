@@ -1,0 +1,56 @@
+﻿<Window x:Class="Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize" 
+        SizeToContent="WidthAndHeight" Topmost="False" WindowState="Normal" Icon="./Resources/calc.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="90"/>
+            <RowDefinition Height ="70"/>
+            <RowDefinition Height ="70"/>
+            <RowDefinition Height ="70"/>
+            <RowDefinition Height ="70"/>
+            <RowDefinition Height ="70"/>
+            <RowDefinition Height ="70"/>
+            <RowDefinition Height ="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="output" HorizontalAlignment="Right" Margin ="15" Grid.Row="0" Grid.ColumnSpan="4" FontSize="35" Text = "0">
+        </TextBlock>
+        <RadioButton GroupName="trigonometry" Content="Radian" Name="Radian" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <RadioButton GroupName="trigonometry" Content="Degree" Name="Degree" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Button x:Name="sin" Content="sin" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="2" Grid.Column="0" Click="UnaryOperation" />
+        <Button x:Name="cos" Content="cos" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="2" Grid.Column="1" Click="UnaryOperation" />
+        <Button x:Name="tan" Content="tan" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="2" Grid.Column="2" Click="UnaryOperation" />
+        <Button x:Name="CE" Content="CE" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="2" Grid.Column="3" Click="Clear" />
+        <Button x:Name="pow" Content="^" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="3" Grid.Column="0" Click="Operation" />
+        <Button x:Name="sqrt" Content="√" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="3" Grid.Column="1" Click="UnaryOperation" />
+        <Button x:Name="divby" Content="1/x" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="3" Grid.Column="2" Click="UnaryOperation" />
+        <Button x:Name="bcsp" Content="←" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="3" Grid.Column="3" Click="Backspace" />
+        <Button x:Name="seven" Content="7" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="4" Grid.Column="0" Click="Number" />
+        <Button x:Name="eight" Content="8" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="4" Grid.Column="1" Click="Number" />
+        <Button x:Name="nine" Content="9" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="4" Grid.Column="2" Click="Number"/>
+        <Button x:Name="div" Content="/" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="4" Grid.Column="3" Click="Operation"/>
+        <Button x:Name="four" Content="4" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="5" Grid.Column="0" Click="Number"/>
+        <Button x:Name="five" Content="5" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="5" Grid.Column="1" Click="Number"/>
+        <Button x:Name="six" Content="6" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="5" Grid.Column="2" Click="Number"/>
+        <Button x:Name="mult" Content="*" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="5" Grid.Column="3" Click="Operation"/>
+        <Button x:Name="one" Content="1" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="6" Grid.Column="0" Click="Number"/>
+        <Button x:Name="two" Content="2" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="6" Grid.Column="1" Click="Number"/>
+        <Button x:Name="three" Content="3" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="6" Grid.Column="2" Click="Number"/>
+        <Button x:Name="minus" Content="-" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="6" Grid.Column="3" Click="Operation"/>
+        <Button x:Name="zero" Content="0" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="7" Grid.Column="0" Click="Number"/>
+        <Button x:Name="dpoint" Content="." HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="7" Grid.Column="1" Click="Point"/>
+        <Button x:Name="equals" Content="=" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height="70" Grid.Row="7" Grid.Column="2" Click="Equals" />
+        <Button x:Name="plus" Content="+" HorizontalAlignment ="Left" VerticalAlignment="Top" Width="200" Height=" 70" Grid.Row="7" Grid.Column="3" Click="Operation"/>
+    </Grid>
+</Window>
